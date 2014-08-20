@@ -19,6 +19,8 @@ To run the app, cd to app root and:
 
 	$ sudo ./luas
 
+### Photo
+![image](https://raw.githubusercontent.com/vfonic/RgbMatrixLuas/master/photo.jpg)
 
 
 ### Credits
