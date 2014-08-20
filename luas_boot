@@ -1,0 +1,28 @@
+#! /bin/sh
+# /etc/init.d/luas_boot
+
+# The following part always gets executed.
+# echo "This part always gets executed"
+
+# The following part carries out specific functions depending on arguments.
+case "$1" in
+  start)
+    /home/pi/scripts/luas_run_all.sh
+    ;;
+  stop)
+    echo "Stopping luas_boot"
+    echo "luas_boot is dead"
+    ;;
+  *)
+    echo "Usage: /etc/init.d/luas_boot {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0
+
+# $ sudo chmod 755 /etc/init.d/luas_boot
+# $ sudo update-rc.d luas_boot defaults
+
+# Later if you decide to remove the init.d script from start-up service list, you can simply run the following.
+# $ sudo update-rc.d -f luas_boot remove
