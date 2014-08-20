@@ -1,3 +1,13 @@
+// Copyright (c) 2013 Matt Hill
+// Use of this source code is governed by The MIT License
+// that can be found in the LICENSE file.
+//
+// This class is for controlling a 32x32 RGB LED Matrix panel using
+// the Raspberry Pi GPIO.
+//
+// This code is based on a cool example found at:
+//   https://github.com/mattdh666/rpi-led-matrix-panel
+
 #include "DisplayUpdater.h"
 #include "RgbMatrix.h"
 #include "RgbMatrixContainer.h"
@@ -16,10 +26,10 @@ char **text;
 int textc;
 
 // Draw some shapes on the RGB Matrix. 
-class RgbMatrixDrawShapes1 : public RgbMatrixContainer
+class RgbMatrixLuasTimes : public RgbMatrixContainer
 {
 public:
-  RgbMatrixDrawShapes1(RgbMatrix *m) : RgbMatrixContainer(m) {}
+  RgbMatrixLuasTimes(RgbMatrix *m) : RgbMatrixContainer(m) {}
 
   void run()
   {
@@ -70,7 +80,7 @@ RgbMatrix *m = NULL;
 RgbMatrixContainer *display = NULL;
 RgbMatrixContainer *updater = NULL;
 
-void runDemo()
+void runProgram()
 {
   updater->start(10);
   display->start();
@@ -90,11 +100,6 @@ void runDemo()
 
 int main(int argc, char *argv[])
 {
-  if (argc < 4) {
-    printf("This program requires at least four arguments\n");
-    exit(-1);
-  }
-
   textc = argc;
   text = argv;
 
@@ -105,10 +110,10 @@ int main(int argc, char *argv[])
 
   m = new RgbMatrix(&io);
 
-  display = new RgbMatrixDrawShapes1(m);
+  display = new RgbMatrixLuasTimes(m);
   updater = new DisplayUpdater(m);
 
-  runDemo();
+  runProgram();
 
   // Stop threads and wait for them to join.
   if (display) delete display;

@@ -8,29 +8,29 @@ do
   then
     if [[ "$bridesglen" =~ ($regex) ]]
     then
-      sudo /home/pi/display16x32/rpi-gradient/demo/demo 2 $ststephens 2 $bridesglen
+      sudo /home/pi/display16x32/luas/luas 2 $ststephens 2 $bridesglen
     elif [[ $bridesglen ]]; then
-      sudo /home/pi/display16x32/rpi-gradient/demo/demo 2 $ststephens 1 $bridesglen
+      sudo /home/pi/display16x32/luas/luas 2 $ststephens 1 $bridesglen
     else
-      sudo /home/pi/display16x32/rpi-gradient/demo/demo 2 $ststephens 0
+      sudo /home/pi/display16x32/luas/luas 2 $ststephens 0
     fi
   elif [[ $ststephens ]]; then
     if [[ "$bridesglen" =~ ($regex) ]]
     then
-      sudo /home/pi/display16x32/rpi-gradient/demo/demo 1 $ststephens 2 $bridesglen
+      sudo /home/pi/display16x32/luas/luas 1 $ststephens 2 $bridesglen
     elif [[ $bridesglen ]]; then
-      sudo /home/pi/display16x32/rpi-gradient/demo/demo 1 $ststephens 1 $bridesglen
+      sudo /home/pi/display16x32/luas/luas 1 $ststephens 1 $bridesglen
     else
-      sudo /home/pi/display16x32/rpi-gradient/demo/demo 1 $ststephens 0
+      sudo /home/pi/display16x32/luas/luas 1 $ststephens 0
     fi
   else
     if [[ "$bridesglen" =~ ($regex) ]]
     then
-      sudo /home/pi/display16x32/rpi-gradient/demo/demo 0 2 $bridesglen
+      sudo /home/pi/display16x32/luas/luas 0 2 $bridesglen
     elif [[ $bridesglen ]]; then
-      sudo /home/pi/display16x32/rpi-gradient/demo/demo 0 1 $bridesglen
+      sudo /home/pi/display16x32/luas/luas 0 1 $bridesglen
     else
-      sudo /home/pi/display16x32/rpi-gradient/demo/demo 0 0
+      sudo /home/pi/display16x32/luas/luas 0 0
     fi
   fi
  # sleep 5
