@@ -3,7 +3,7 @@ Raspberry Pi Library for Controlling an RGB LED Matrix
 
 This library enables drawing shapes and writing text on an RGB LED Matrix using Raspberry Pi GPIO.
 I developed it using a Raspberry Pi Model B running Debian GNU/Linux 7.0 (wheezy) and a 16x32 RGB LED Matrix purchased from the excellent Adafruit.
-http://www.adafruit.com/products/607
+http://www.adafruit.com/products/420
 
 
 Check out Adafruit's tutorial for more details:  https://learn.adafruit.com/connecting-a-16x32-rgb-led-matrix-panel-to-a-raspberry-pi
