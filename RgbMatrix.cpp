@@ -421,8 +421,8 @@ void RgbMatrix::drawPixel(uint8_t x, uint8_t y, Color color)
 
   // Break out values from structure
   uint8_t red   = color.red;
-  uint8_t green = color.green;
-  uint8_t blue  = color.blue;
+  uint8_t green = color.blue;
+  uint8_t blue  = color.green;
 
   //TODO: Adding Gamma correction slowed down the PWM and made
   //      the matrix flicker, so I'm removing it for now.
