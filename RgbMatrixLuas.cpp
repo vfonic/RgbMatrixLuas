@@ -44,15 +44,15 @@ public:
 
     _matrix->setFontSize(2); // Medium (4x6) Font
     _matrix->setTextCursor(1, 18);
-    _matrix->setFontColor(green);
+    _matrix->setFontColor(blue);
 
     int idx = 1;
     display_time(idx);
 
     idx += text[1][0] - '0' + 1;
 
-    _matrix->setTextCursor(1, 1);
-    _matrix->setFontColor(blue);
+    _matrix->setTextCursor(1, 8);
+    _matrix->setFontColor(green);
     display_time(idx);
  }
 
