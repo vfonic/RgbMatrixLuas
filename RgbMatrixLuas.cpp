@@ -86,7 +86,7 @@ void runProgram()
   display->start();
 
   // getchar();
-  sleep(60);
+  sleep(30);
 
   delete display;
   delete updater;

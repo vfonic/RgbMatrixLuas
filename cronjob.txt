@@ -1,0 +1,4 @@
+crontab -e
+* * * * * /home/pi/scripts/luas_fetch_all.sh
+sudo crontab -e
+@reboot /home/pi/scripts/luas_run_all.sh
