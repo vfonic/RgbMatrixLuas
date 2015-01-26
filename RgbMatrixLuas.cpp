@@ -43,16 +43,16 @@ public:
     blue.blue = 5;
 
     _matrix->setFontSize(2); // Medium (4x6) Font
-    _matrix->setTextCursor(1, 18);
-    _matrix->setFontColor(blue);
+    _matrix->setTextCursor(1, 8);
+    _matrix->setFontColor(green);
 
     int idx = 1;
     display_time(idx);
 
     idx += text[1][0] - '0' + 1;
 
-    _matrix->setTextCursor(1, 8);
-    _matrix->setFontColor(green);
+    _matrix->setTextCursor(1, 18);
+    _matrix->setFontColor(blue);    
     display_time(idx);
  }
 
@@ -86,7 +86,7 @@ void runProgram()
   display->start();
 
   // getchar();
-  sleep(30);
+  sleep(13);
 
   delete display;
   delete updater;

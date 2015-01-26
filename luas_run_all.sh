@@ -1,8 +1,8 @@
 #!/bin/bash
 while true
 do
-  bridesglen=`/home/pi/scripts/luas_wa_bridesglen.sh`
   ststephens=`/home/pi/scripts/luas_wa_st_stephens.sh`
+  bridesglen=`/home/pi/scripts/luas_wa_bridesglen.sh`
   regex="[0-9A-Z]{1,3} [0-9]{1,2}"
   if [[ "$ststephens" =~ ($regex) ]]
   then
@@ -33,5 +33,4 @@ do
       sudo /home/pi/display16x32/luas/luas 0 0
     fi
   fi
- # sleep 5
 done
